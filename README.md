@@ -50,6 +50,7 @@ Galaxy Tab S9 5G system · stock HyperOS vendor · Magisk root · **v1.6-b30-202
 <table>
 <tr><td align="center"><img src="assets/ui/home.jpg" width="260" alt="Home screen"><br><sub>Home screen</sub></td><td align="center"><img src="assets/ui/quick-panel.jpg" width="260" alt="Quick panel"><br><sub>Quick panel</sub></td><td align="center"><img src="assets/ui/settings.jpg" width="260" alt="Settings: Wi-Fi Calling on"><br><sub>Settings: Wi-Fi Calling on</sub></td></tr>
 <tr><td align="center"><img src="assets/ui/sound.jpg" width="260" alt="Sound"><br><sub>Sound</sub></td><td align="center"><img src="assets/ui/dolby.jpg" width="260" alt="Dolby Atmos"><br><sub>Dolby Atmos</sub></td><td align="center"><img src="assets/ui/about.jpg" width="260" alt="About: shows as Galaxy Tab S9 5G"><br><sub>About: shows as Galaxy Tab S9 5G</sub></td></tr>
+<tr><td align="center" colspan="3"><img src="assets/ui/second-screen-dex.jpg" width="800" alt="Second screen: Galaxy S25 Ultra DeX on the tablet"><br><sub>Second screen: a Galaxy S25 Ultra's wireless DeX desktop on the tablet</sub></td></tr>
 </table>
 <sub>Phone number, IMEI and serial number blurred.</sub>
 </div>
