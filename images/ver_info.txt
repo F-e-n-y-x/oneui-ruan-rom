@@ -1,0 +1,26 @@
+{
+    "Image_Build_IDs": {
+        "adsp": "ADSP.HT.5.7-01235-WAIPIO-1", 
+        "aop": "AOP.HO.4.0-00568-WAIPIO_E-1", 
+        "boot": "BOOT.MXF.2.0-01037-WAIPIO-1", 
+        "btfm_CHK": "BTFM.CHE.2.1.6-00086-QCACHROMZ-1", 
+        "btfm_che": "BTFM.CHE.3.2.1-00270-QCACHROMZ-2", 
+        "btfm_msl": "BTFW.MOSELLE.1.1.1-00218-MSL_PATCHZ-1", 
+        "cdsp": "CDSP.HT.2.8.1-00219-NETRANI-1", 
+        "common": "Netrani.LA.2.0.r1-00042-STD.PROD-1", 
+        "cpucp": "CPUCP.FW.1.0-00127-WAIPIO.EXT-1", 
+        "cpuss_vm": "CPUSS.CPUSYS.VM.1.0-00027-WAIPIO.EXT-1", 
+        "glue": "GLUE.NETRANI_LA.1.0-00138-NOOP_TEST-1", 
+        "modem": "MPSS.DE.3.1.1-00703-NETRANI_GENALL_PACK-1", 
+        "tz": "TZ.XF.5.18-00374-SPF.WAIPIO-1", 
+        "tz_apps": "TZ.APPS.1.18-00328-SPF.WAIPIO-1", 
+        "wlan_hl": "WLAN.HL.3.4.3-00451-QCAHLSWMTPLZ-1", 
+        "wlan_msl": "WLAN.MSL.2.0-01109-QCAMSLSWPLZ-1"
+    }, 
+    "Metabuild_Info": {
+        "Meta_Build_ID": "Netrani.LA.2.0.r1-00042-STD.PROD-1", 
+        "Product_Flavor": "asic", 
+        "Time_Stamp": "2023-11-26 11:01:34"
+    }, 
+    "Version": "1.0"
+}
