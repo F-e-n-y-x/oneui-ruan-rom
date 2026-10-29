@@ -1,4 +1,16 @@
 {
   "version": 1,
-  "packs": []
+  "packs": [
+    {
+      "id": "selinux-denials",
+      "title": "SELinux log noise",
+      "description": "Silences four harmless SELinux denials (fonts, efs, em_version) logged at boot.",
+      "version": 1,
+      "min_build": 30,
+      "fixed_in": 32,
+      "file": "packs/selinux-denials-1.zip",
+      "size": 537,
+      "sha256": "e643bfaa2e9e256e9ffc3beffe3dd079b35d0df3758cf6908aff51ed3089fde0"
+    }
+  ]
 }
