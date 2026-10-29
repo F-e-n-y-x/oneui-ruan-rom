@@ -1,5 +1,11 @@
 {
   "version": 1,
+  "rom": {
+    "build": 32,
+    "version": "v1.8-b32",
+    "notes": "Ruan Fixes in Settings, Bluetooth battery ring, no power-button emergency calls",
+    "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom"
+  },
   "packs": [
     {
       "id": "selinux-denials",
