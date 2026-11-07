@@ -1,10 +1,26 @@
 {
   "version": 1,
   "rom": {
-    "build": 32,
-    "version": "v1.8-b32",
-    "notes": "Ruan Fixes in Settings, Bluetooth battery ring, no power-button emergency calls",
-    "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom"
+    "build": 37,
+    "version": "v2.2-b37",
+    "notes": "Face unlock, smoother UI (CneApp crash fix), cover sleep/wake, lighter system, Wi-Fi calling stays on",
+    "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom",
+    "ota": [
+      {
+        "from_build": 36,
+        "size": 35743066,
+        "sha256": "0fdc4529051747fbf3d1783db1ffaeefa31c3c8c1fbe4b34ddd6e12ed6f1516d",
+        "parts": [
+          "https://github.com/F-e-n-y-x/oneui-ruan-rom/releases/download/v2.2-b37-20261108/b37-from-b36.bin"
+        ],
+        "properties": [
+          "FILE_HASH=D9xFKQUXR/vz0Xg9sf+u76McPIwfvks03dbhLtbxUW0=",
+          "FILE_SIZE=35743066",
+          "METADATA_HASH=0sbQtyYR6F3Xt5b316UFTSaS6eX2oxoZ4OHzVxmdqq4=",
+          "METADATA_SIZE=255660"
+        ]
+      }
+    ]
   },
   "packs": [
     {
