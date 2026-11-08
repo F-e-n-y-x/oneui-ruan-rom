@@ -62,23 +62,28 @@ Galaxy Tab S9 5G system · stock HyperOS vendor · Magisk root · **v2.2-b37-202
 > Needs an **unlocked bootloader**. The first install **erases all data**: back up first.
 > **Never re-lock the bootloader** on this ROM.
 
-**You need:** the tablet with an unlocked bootloader and the battery above 50%, a USB-C data cable, and a PC.
-Windows: Xiaomi or Google USB driver. Linux / macOS: Android platform-tools (`fastboot`) in PATH.
+**You need:** the tablet with an unlocked bootloader and the battery above 50%, a USB-C data cable, a PC with about
+13 GB free, and [7-Zip](https://www.7-zip.org). Windows: Xiaomi or Google USB driver. Linux / macOS: Android
+platform-tools (`fastboot`) in PATH, and `7z` (p7zip / 7zip package; Homebrew `sevenzip`).
 
-1. Download every `OneUI8.5-ruan-*.7z.00N` part of the **[latest release](https://github.com/F-e-n-y-x/oneui-ruan-rom/releases/latest)**
-   (about 5 GB) into one folder and open the `.7z.001` file with 7-Zip (Windows) or `7z x` (Linux / macOS).
-   The `.sha256` file holds the checksum of the joined archive.
+1. Get this repository: `git clone https://github.com/F-e-n-y-x/oneui-ruan-rom` (or **Code > Download ZIP** and unzip it).
 2. Power off the tablet, then hold **Volume Down + Power** until **FASTBOOT** shows. Connect it to the PC.
-3. In the extracted folder, run **`install.bat`** (Windows) or **`./install.sh`** (Linux / macOS) and type `YES`.
+3. In the repository folder, run **`install.bat`** (Windows) or **`./install.sh`** (Linux / macOS). It downloads the
+   release named in `release.txt` (about 5 GB; an interrupted download resumes when you run it again), checks its
+   SHA-256, unpacks it into `download/` and starts the flasher. Type `YES` when asked.
 4. The tablet reboots by itself. The first boot takes up to 10 minutes; about 2 minutes later apps are optimised in the background.
 5. Open the **Magisk** app once and let it finish its setup.
+
+Prefer to download by hand? Get every `OneUI8.5-ruan-*.7z.00N` part of the
+**[latest release](https://github.com/F-e-n-y-x/oneui-ruan-rom/releases/latest)**, open the `.7z.001` file with 7-Zip and
+run `install.bat` / `./install.sh` inside the extracted folder.
 
 ## Update (keeps data)
 
 - **On the tablet (v2.2-b37 and later):** Settings > **Ruan Fixes** offers new builds. It downloads the signed update
   and installs it in the background (seamless A/B update); restart when it says so.
-- **From a PC (any earlier version):** download and extract the latest release as above, boot to **FASTBOOT** and run
-  **`update.bat`** or **`./update.sh`**.
+- **From a PC (any earlier version):** `git pull` (or download the ZIP again), boot to **FASTBOOT** and run
+  **`update.bat`** or **`./update.sh`**: same download and checks as install, but keeps your data.
 
 ## Troubleshooting
 

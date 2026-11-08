@@ -1,7 +1,2 @@
-# Images joined from their .partNNN files by install/update
-/images/NON-HLOS.bin
-/images/boot.img
-/images/recovery.img
-/images/super.img
-/images/userdata.img
-/images/vendor_boot.img
+# Release download and unpacked package (install.sh / install.bat)
+/download/
