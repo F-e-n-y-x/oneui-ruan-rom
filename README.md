@@ -107,6 +107,19 @@ run `install.bat` / `./install.sh` inside the extracted folder.
 The installer flashes the stock HyperOS OS3.0.305.0 firmware, the One UI `super` image, the kernel and `vbmeta` with
 verification disabled (the bootloader stays unlocked), then reboots. All flashing happens in bootloader fastboot.
 
+## Source code
+
+Open-source parts of the ROM and where their source is:
+
+| Part | License | Source |
+|---|---|---|
+| Kernel: Caramel 5.10 | GPL-2.0 | [noble6/kernel_xiaomi_ruan_caramel](https://github.com/noble6/kernel_xiaomi_ruan_caramel) |
+| `md4.ko`, `cifs.ko` (storage share) | GPL-2.0 | Android Common Kernel android12-5.10 @ [`e1a4a0f26`](https://android.googlesource.com/kernel/common/+/e1a4a0f26), `gki_defconfig`, `CONFIG_CIFS=m`, `CONFIG_CRYPTO_MD4=m` |
+| `ksmbd.ko` (SMB server) | GPL-2.0 | [namjaejeon/ksmbd @ `bbe4cb2`](https://github.com/namjaejeon/ksmbd/tree/bbe4cb2), built against the tree above |
+| Magisk 30.7 | GPL-3.0 | [topjohnwu/Magisk v30.7](https://github.com/topjohnwu/Magisk/tree/v30.7) |
+
+The install and update scripts in this repository are MIT-licensed ([LICENSE](LICENSE)).
+
 ## Disclaimer
 
 Unofficial community project, not affiliated with Samsung or Xiaomi. Flashing custom firmware can void your warranty and
