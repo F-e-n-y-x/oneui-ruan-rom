@@ -2,6 +2,8 @@
 
 <img src="assets/banner.png" alt="One UI 8.5 for Redmi Pad Pro 5G" width="100%">
 
+**[⬇️ Download the full ROM (one zip, SourceForge)](https://sourceforge.net/projects/oneui-port-redmi-pad-pro-5g/files/OneUI8.5-ruan-v2.2-b37-20261108.zip/download)** · [All builds on SourceForge](https://sourceforge.net/projects/oneui-port-redmi-pad-pro-5g/files/)
+
 # One UI 8.5 for Redmi Pad Pro 5G
 
 **Samsung One UI 8.5 (Android 16) for the Redmi Pad Pro 5G / POCO Pad 5G (`ruan`): flashable fastboot ROM**
