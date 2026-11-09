@@ -38,4 +38,6 @@ if [ ! -f "$name/$mode.sh" ]; then
     "$z" x -y "${files[0]}"
     rm -f "${files[@]}"   # 5 GB back; the unpacked folder is kept for later runs
 fi
-exec bash "$name/$mode.sh"
+# The flasher builds its paths from `dirname $0` and cd's there first: run it from its own folder.
+cd "$name"
+exec bash "./$mode.sh"
