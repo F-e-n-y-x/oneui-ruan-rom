@@ -13,17 +13,19 @@ get() { curl -fL --retry 5 -H 'Accept: application/octet-stream' "$@"; }
 command -v fastboot >/dev/null || { echo "fastboot not found: install Android platform-tools and add them to PATH"; exit 1; }
 mkdir -p download
 cd download
-if [ ! -f "$name/$mode.sh" ]; then
+# "name url" per asset; in the API's JSON an asset's own url comes right before its name
+assets=$(curl -fsSL --retry 3 "$api/tags/$tag" | awk '
+    /"url": ".*\/releases\/assets\// { u = $0; sub(/.*"url": "/, "", u); sub(/".*/, "", u); next }
+    /"name": / && u { n = $0; sub(/.*"name": "/, "", n); sub(/".*/, "", n); print n, u; u = "" }') \
+    || { echo "GitHub did not answer (no internet, or its limit of 60 requests an hour): try again later"; exit 1; }
+url() { awk -v n="$1" '$1 == n { print $2 }' <<< "$assets"; }
+get -o "$name.7z.sha256" "$(url "$name.7z.sha256")"
+# A release re-uploaded under the same tag (b37 on 2026-11-09) must not reuse the old unpacked folder.
+if [ ! -f "$name/$mode.sh" ] || ! cmp -s "$name.7z.sha256" "$name/.package.sha256"; then
     z=$(command -v 7z || command -v 7zz || command -v 7za) \
         || { echo "7-Zip not found: install p7zip / 7zip (Linux) or sevenzip (Homebrew)"; exit 1; }
     sha() { if command -v sha256sum >/dev/null; then sha256sum; else shasum -a 256; fi; }
     echo "Downloading $name (about 5 GB, needs about 13 GB free while unpacking)"
-    # "name url" per asset; in the API's JSON an asset's own url comes right before its name
-    assets=$(curl -fsSL --retry 3 "$api/tags/$tag" | awk '
-        /"url": ".*\/releases\/assets\// { u = $0; sub(/.*"url": "/, "", u); sub(/".*/, "", u); next }
-        /"name": / && u { n = $0; sub(/.*"name": "/, "", n); sub(/".*/, "", n); print n, u; u = "" }')
-    url() { awk -v n="$1" '$1 == n { print $2 }' <<< "$assets"; }
-    get -o "$name.7z.sha256" "$(url "$name.7z.sha256")"
     files=($(awk -v p="$name.7z.0" 'index($1, p) == 1 { print $1 }' <<< "$assets" | sort))
     [ ${#files[@]} -gt 0 ] || { echo "Release $tag has no $name.7z parts"; exit 1; }
     for f in "${files[@]}"; do
@@ -34,8 +36,14 @@ if [ ! -f "$name/$mode.sh" ]; then
     echo "Checking the download..."
     got=$(cat "${files[@]}" | sha | cut -d' ' -f1)
     [ "$got" = "$(cut -d' ' -f1 "$name.7z.sha256")" ] \
-        || { echo "The download is damaged: delete the download folder and run again"; exit 1; }
-    "$z" x -y "${files[0]}"
+        || { rm -f "${files[@]}"; echo "The download is damaged and was deleted: run again"; exit 1; }
+    # Unpack beside the old folder and swap only when 7-Zip succeeded: a half-unpacked folder is never used.
+    rm -rf "$name.tmp"
+    "$z" x -y -o"$name.tmp" "${files[0]}"
+    cp "$name.7z.sha256" "$name.tmp/$name/.package.sha256"
+    rm -rf "$name"
+    mv "$name.tmp/$name" "$name"
+    rmdir "$name.tmp"
     rm -f "${files[@]}"   # 5 GB back; the unpacked folder is kept for later runs
 fi
 # The flasher builds its paths from `dirname $0` and cd's there first: run it from its own folder.
