@@ -74,7 +74,12 @@ platform-tools (`fastboot`) in PATH, and `7z` (p7zip / 7zip package; Homebrew `s
 4. The tablet reboots by itself. The first boot takes up to 10 minutes; about 2 minutes later apps are optimised in the background.
 5. Open the **Magisk** app once and let it finish its setup.
 
-Prefer to download by hand? Get every `OneUI8.5-ruan-*.7z.00N` part of the
+Prefer one file? Download the full ROM as a single zip from
+**[SourceForge](https://sourceforge.net/projects/oneui-port-redmi-pad-pro-5g/files/OneUI8.5-ruan-v2.2-b37-20261108.zip/download)**
+(5.7 GB, SHA-256 `8e0b76ce6c525a6c4289cd11217374867d3ad66865635df8aeec1cf8a2f97a2d`), extract it and run
+`install.bat` / `./install.sh` inside the extracted folder. No git needed.
+
+Or get every `OneUI8.5-ruan-*.7z.00N` part of the
 **[latest release](https://github.com/F-e-n-y-x/oneui-ruan-rom/releases/latest)**, open the `.7z.001` file with 7-Zip and
 run `install.bat` / `./install.sh` inside the extracted folder.
 
