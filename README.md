@@ -10,7 +10,7 @@
 
 Galaxy Tab S9 5G system · stock HyperOS vendor · Magisk root · **v2.5-b40-20261110**
 
-**[What works](#what-works)** · **[Screenshots](#screenshots)** · **[Install](#install)** · **[Update](#update-keeps-data)** · **[Troubleshooting](#troubleshooting)**
+**[What works](#what-works)** · **[Screenshots](#screenshots)** · **[Install](#install)** · **[Update](#update-keeps-data)** · **[Ruan Fixes](#ruan-fixes)** · **[Troubleshooting](#troubleshooting)**
 
 </div>
 
@@ -23,12 +23,14 @@ Galaxy Tab S9 5G system · stock HyperOS vendor · Magisk root · **v2.5-b40-202
 <tr><td valign="top">
 
 - SIM, 4G/5G data, dual SIM
-- **Calls on VoLTE and Wi-Fi calling** (Wi-Fi calling on by default), SMS in and out; VoNR switch
+- **Calls on VoLTE and Wi-Fi calling** (Wi-Fi calling on by default), SMS in and out; VoNR switch. Calls play on the
+  speaker (the tablet has no earpiece, so there is no speaker button)
 - Wi-Fi (fast roaming), hotspot 2.4 / 5 GHz
 - Bluetooth audio with headset battery in the status bar
 - Speakers, mic, **Dolby Atmos** app
-- 120 Hz while touching, 60 Hz idle; 33 W fast charging
-- Samsung account, Galaxy Store, **Quick Share**
+- 120 Hz while touching, 60 Hz idle; **33 W fast charging** (Xiaomi 33 W PPS charger: "Super fast charging", other PD
+  chargers: "Fast charging")
+- Samsung account, Galaxy Store, **Quick Share** to and from Galaxy devices
 - **Storage share** and **Second screen** with a Galaxy phone / PC
 - Theme Center, Good Lock, Routines, Edge panels
 - **Face unlock** (front camera) with a guided multi-angle scan and live preview
@@ -37,13 +39,15 @@ Galaxy Tab S9 5G system · stock HyperOS vendor · Magisk root · **v2.5-b40-202
 - Bluetooth AAC; LDAC and aptX encoders included
 - **Root** (Magisk 31.1; the app installs itself, root is ready after the first restart)
 - **USB debugging on from the first boot** (also during setup); switches for it and for root over ADB in Ruan Fixes
-- **Ruan Fixes** (Settings): signed fix packs and add-ons, update notifications, history
+- **Ruan Fixes** (Settings): signed fix packs and optional add-ons, update notifications, history
+- **Samsung Flow** and **Android Auto** (USB) as Ruan Fixes add-ons
 
 </td><td valign="top">
 
 - Samsung Camera and S Pen (removed: need Samsung hardware). The cameras work in other camera apps
 - Face unlock is camera-only (weak: not for banking apps)
 - Bixby, Samsung Pass, Secure Folder, Knox
+- Hands-free "Hey Google" is off with the Android Auto add-on (it crashed the audio chip); the mic button works
 - Protected video on Second screen
 - Contacts stored on the SIM card are not shown
 
@@ -98,6 +102,19 @@ run `install.bat` / `./install.sh` inside the extracted folder.
 - **Only 30 GB of storage?** Builds before b40 left /data at 30 GB. `update` keeps data and so keeps that size: back up
   and run `install` once to get the full storage (about 103 GB free on the 128 GB model).
 
+## Ruan Fixes
+
+Settings > **Ruan Fixes** checks this repository for signed packs; every pack is tested on a real tablet first.
+
+- **Fixes** (installed together with *Download and install*, restart once): Quick Share, Fast charging indicator
+  (Fast / Super fast charging text and a charging bolt that no longer goes missing), Ruan Fixes app updates.
+- **Add-ons** (optional, each has its own Install / Remove):
+  - **Wireless ADB**: adb on port 5555 that stays on after restarts (`adb connect <tablet IP>:5555`)
+  - **Samsung Flow**: hides root from Samsung Flow only, everything else keeps root
+  - **Android Auto**: Android Auto as a system app so it gets the USB permission for the car; get Android Auto from
+    Play Store too
+- On an older build? Install v2.5-b40 first, then use Ruan Fixes.
+
 ## Troubleshooting
 
 | Problem | Fix |
@@ -105,6 +122,7 @@ run `install.bat` / `./install.sh` inside the extracted folder.
 | `Missmatching image and device` | This ROM is only for `ruan` (Redmi Pad Pro 5G / POCO Pad 5G). The Wi-Fi model (`dizi`) is not supported. |
 | 7-Zip reports a CRC / data error | One part did not download completely: download that `.7z.00N` part again. |
 | `waiting for any device` | Install the USB driver (Windows), try another cable/port, check `fastboot devices`. |
+| Xiaomi 33 W charger only charges at 18 W | It unlocks 33 W only when plugged in while the tablet is on: unplug and plug it in again. |
 | Stuck on the boot logo for more than 15 min | Run `install` again (erases data). Back to HyperOS: flash the stock HyperOS fastboot ROM with its `flash_all` script. |
 
 ## Details
