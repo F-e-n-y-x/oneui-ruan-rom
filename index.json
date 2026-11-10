@@ -32,13 +32,13 @@
     {
       "id": "ruan-fixes-3",
       "title": "Ruan Fixes 3.2",
-      "description": "Adds a Wireless ADB switch (adb on port 5555, stays on after restarts). Restart after installing.",
-      "version": 1,
+      "description": "New Add-ons section with optional extras, including a Wireless ADB switch. Restart after installing.",
+      "version": 2,
       "min_build": 40,
       "fixed_in": 0,
-      "file": "packs/ruan-fixes-3-1.zip",
-      "size": 44633,
-      "sha256": "b2789d6279875193955f7f4e4b4d5e837512180c61c1d9f6b40bea0f50e91039"
+      "file": "packs/ruan-fixes-3-2.zip",
+      "size": 45058,
+      "sha256": "ec67694e44976ea40ce528f8de98a8960f8912ad8d5d084491411e9fad498b87"
     },
     {
       "id": "selinux-denials",
@@ -61,6 +61,19 @@
       "file": "packs/usb-debugging-2.zip",
       "size": 1149,
       "sha256": "cbe14c460349549d180cafec37df6591664a4ae6c5391124ef10b11d51f7bd9a"
+    }
+  ],
+  "addons": [
+    {
+      "id": "samsung-flow",
+      "title": "Samsung Flow",
+      "description": "Lets Samsung Flow open on this rooted tablet: root is hidden from Samsung Flow only. Restart after installing.",
+      "version": 1,
+      "min_build": 38,
+      "fixed_in": 0,
+      "file": "packs/samsung-flow-1.zip",
+      "size": 890,
+      "sha256": "fb5dbf57ca5942ded8f62764a10a9328e8793bf01d31278880dfb84c9c041a30"
     }
   ]
 }
