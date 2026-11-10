@@ -8,6 +8,17 @@
   },
   "packs": [
     {
+      "id": "quick-share",
+      "title": "Quick Share",
+      "description": "Quick Share finds and sends to nearby Galaxy devices (Wi-Fi Direct works without Samsung's Wi-Fi vendor parts). Restart after installing.",
+      "version": 1,
+      "min_build": 40,
+      "fixed_in": 0,
+      "file": "packs/quick-share-1.zip",
+      "size": 2182325,
+      "sha256": "4e7812654bb6383cf8c2149cf631294609add530ac8fcac87895eb764c02308a"
+    },
+    {
       "id": "ruan-fixes-2",
       "title": "Ruan Fixes 3.0",
       "description": "Update notifications (every 6 h, daily, weekly or never), history of installed fixes, switches for USB debugging at boot and root for ADB shell; fixes the crash on open.",
