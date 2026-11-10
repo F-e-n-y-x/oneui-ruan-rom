@@ -33,12 +33,12 @@
       "id": "ruan-fixes-3",
       "title": "Ruan Fixes 3.2",
       "description": "New Add-ons section with optional extras, including a Wireless ADB switch. Restart after installing.",
-      "version": 2,
+      "version": 3,
       "min_build": 40,
       "fixed_in": 0,
-      "file": "packs/ruan-fixes-3-2.zip",
-      "size": 45058,
-      "sha256": "ec67694e44976ea40ce528f8de98a8960f8912ad8d5d084491411e9fad498b87"
+      "file": "packs/ruan-fixes-3-3.zip",
+      "size": 44978,
+      "sha256": "65c256f13b7ee5fa4c0a379c5dd178a54bfc96c937fdc2ecd04d4c065e7102b7"
     },
     {
       "id": "selinux-denials",
