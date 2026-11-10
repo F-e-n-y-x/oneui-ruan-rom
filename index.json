@@ -1,28 +1,23 @@
 {
   "version": 1,
   "rom": {
-    "build": 37,
-    "version": "v2.2-b37",
-    "notes": "Face unlock, smoother UI (CneApp crash fix), cover sleep/wake, lighter system, Wi-Fi calling stays on",
-    "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom",
-    "ota": [
-      {
-        "from_build": 36,
-        "size": 35743066,
-        "sha256": "0fdc4529051747fbf3d1783db1ffaeefa31c3c8c1fbe4b34ddd6e12ed6f1516d",
-        "parts": [
-          "https://github.com/F-e-n-y-x/oneui-ruan-rom/releases/download/v2.2-b37-20261108/b37-from-b36.bin"
-        ],
-        "properties": [
-          "FILE_HASH=D9xFKQUXR/vz0Xg9sf+u76McPIwfvks03dbhLtbxUW0=",
-          "FILE_SIZE=35743066",
-          "METADATA_HASH=0sbQtyYR6F3Xt5b316UFTSaS6eX2oxoZ4OHzVxmdqq4=",
-          "METADATA_SIZE=255660"
-        ]
-      }
-    ]
+    "build": 40,
+    "version": "v2.5-b40",
+    "notes": "Final full build: Classic DeX, USB debugging from the first boot (prompt during setup), full storage (earlier builds: 30 GB), Magisk 31.1 app, Wi-Fi calling on by default, VoNR switch, face unlock scan and preview, double tap to wake, 4x faster installer. Install from a PC; for the full storage use install (erases data), update keeps the old size.",
+    "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom"
   },
   "packs": [
+    {
+      "id": "ruan-fixes-2",
+      "title": "Ruan Fixes 3.0",
+      "description": "Update notifications (every 6 h, daily, weekly or never), history of installed fixes, switches for USB debugging at boot and root for ADB shell; fixes the crash on open.",
+      "version": 2,
+      "min_build": 38,
+      "fixed_in": 40,
+      "file": "packs/ruan-fixes-2-2.zip",
+      "size": 43783,
+      "sha256": "5c27cf79fe626a1c640651f700be5109c7c4e07b245076f8115d0a180907e14b"
+    },
     {
       "id": "selinux-denials",
       "title": "SELinux log noise",
@@ -33,6 +28,17 @@
       "file": "packs/selinux-denials-1.zip",
       "size": 537,
       "sha256": "e643bfaa2e9e256e9ffc3beffe3dd079b35d0df3758cf6908aff51ed3089fde0"
+    },
+    {
+      "id": "usb-debugging",
+      "title": "USB debugging and adb root after reboot",
+      "description": "Starts USB debugging at boot without toggling it, and allows su from adb shell (deny Shell in Magisk to stop that).",
+      "version": 2,
+      "min_build": 39,
+      "fixed_in": 40,
+      "file": "packs/usb-debugging-2.zip",
+      "size": 1149,
+      "sha256": "cbe14c460349549d180cafec37df6591664a4ae6c5391124ef10b11d51f7bd9a"
     }
   ]
 }
