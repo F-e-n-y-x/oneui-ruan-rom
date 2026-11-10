@@ -41,17 +41,6 @@
       "sha256": "b2789d6279875193955f7f4e4b4d5e837512180c61c1d9f6b40bea0f50e91039"
     },
     {
-      "id": "samsung-flow",
-      "title": "Samsung Flow",
-      "description": "Samsung Flow opens instead of saying the device is rooted: root is hidden from Samsung Flow only. Restart after installing.",
-      "version": 1,
-      "min_build": 38,
-      "fixed_in": 0,
-      "file": "packs/samsung-flow-1.zip",
-      "size": 893,
-      "sha256": "0fd442bdd4628028979c2c9e881a1619f992aee9f5b2a68747a992d3663552b9"
-    },
-    {
       "id": "selinux-denials",
       "title": "SELinux log noise",
       "description": "Silences four harmless SELinux denials (fonts, efs, em_version) logged at boot.",
