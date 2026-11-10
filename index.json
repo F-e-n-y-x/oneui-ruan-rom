@@ -30,6 +30,28 @@
       "sha256": "5c27cf79fe626a1c640651f700be5109c7c4e07b245076f8115d0a180907e14b"
     },
     {
+      "id": "ruan-fixes-3",
+      "title": "Ruan Fixes 3.2",
+      "description": "Adds a Wireless ADB switch (adb on port 5555, stays on after restarts). Restart after installing.",
+      "version": 1,
+      "min_build": 40,
+      "fixed_in": 0,
+      "file": "packs/ruan-fixes-3-1.zip",
+      "size": 44633,
+      "sha256": "b2789d6279875193955f7f4e4b4d5e837512180c61c1d9f6b40bea0f50e91039"
+    },
+    {
+      "id": "samsung-flow",
+      "title": "Samsung Flow",
+      "description": "Samsung Flow opens instead of saying the device is rooted: root is hidden from Samsung Flow only. Restart after installing.",
+      "version": 1,
+      "min_build": 38,
+      "fixed_in": 0,
+      "file": "packs/samsung-flow-1.zip",
+      "size": 893,
+      "sha256": "0fd442bdd4628028979c2c9e881a1619f992aee9f5b2a68747a992d3663552b9"
+    },
+    {
       "id": "selinux-denials",
       "title": "SELinux log noise",
       "description": "Silences four harmless SELinux denials (fonts, efs, em_version) logged at boot.",
