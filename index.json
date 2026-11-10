@@ -3,7 +3,7 @@
   "rom": {
     "build": 40,
     "version": "v2.5-b40",
-    "notes": "Final full build: Classic DeX, USB debugging from the first boot (prompt during setup), full storage (earlier builds: 30 GB), Magisk 31.1 app, Wi-Fi calling on by default, VoNR switch, face unlock scan and preview, double tap to wake, 4x faster installer. Install from a PC; for the full storage use install (erases data), update keeps the old size.",
+    "notes": "Final build: Classic DeX, USB debugging from first boot, full storage, faster installer. Earlier builds: back up and use install once for full storage (update keeps 30 GB).",
     "url": "https://github.com/F-e-n-y-x/oneui-ruan-rom"
   },
   "packs": [
