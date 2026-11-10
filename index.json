@@ -8,17 +8,6 @@
   },
   "packs": [
     {
-      "id": "hey-google-crash",
-      "title": "Hey Google crash",
-      "description": "Stops the tablet from restarting when \"Hey Google\" or Android Auto turns on hotword listening (audio chip crash). Assistant still works from the mic button.",
-      "version": 1,
-      "min_build": 40,
-      "fixed_in": 0,
-      "file": "packs/hey-google-crash-1.zip",
-      "size": 1209,
-      "sha256": "acc268dfc1b35b94a08996ad477b73205873dda2930cea63022db147a309ac1c"
-    },
-    {
       "id": "quick-share",
       "title": "Quick Share",
       "description": "Quick Share finds and sends to nearby Galaxy devices (Wi-Fi Direct works without Samsung's Wi-Fi vendor parts). Restart after installing.",
@@ -78,13 +67,13 @@
     {
       "id": "android-auto",
       "title": "Android Auto",
-      "description": "Makes Android Auto work with your car over USB: restores it as a system app so it gets the USB permission. Get Android Auto from Play Store too. Restart after installing.",
-      "version": 1,
+      "description": "Makes Android Auto work with your car over USB: system app with the USB permission, and no restart when hands-free Hey Google starts. Get Android Auto from Play Store too. Restart after installing.",
+      "version": 2,
       "min_build": 40,
       "fixed_in": 0,
-      "file": "packs/android-auto-1.zip",
-      "size": 1556847,
-      "sha256": "88b379700d0d1f5e013d7afc05b7fd0060c8574ba4bf51b4cfe9fa1b5c913316"
+      "file": "packs/android-auto-2.zip",
+      "size": 1557885,
+      "sha256": "cc492ab1a598c1a973302634450db8d63b4497611f295c4656eeece621cc2bf8"
     },
     {
       "id": "samsung-flow",
