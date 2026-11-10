@@ -10,13 +10,13 @@
     {
       "id": "fast-charging-indicator",
       "title": "Fast charging indicator",
-      "description": "Shows Fast charging or Super fast charging on the lock screen for fast chargers (33 W PPS = Super fast). Restart after installing.",
-      "version": 1,
+      "description": "Shows Fast charging or Super fast charging for fast chargers (33 W PPS = Super fast), and the charging bolt in the status bar no longer goes missing. Restart after installing.",
+      "version": 2,
       "min_build": 40,
       "fixed_in": 0,
-      "file": "packs/fast-charging-indicator-1.zip",
-      "size": 12698023,
-      "sha256": "ad4327a3b480a8124ed1a6c01e8db205dbd74e0dce1a22fc344c0ee867c4bed2"
+      "file": "packs/fast-charging-indicator-2.zip",
+      "size": 12697991,
+      "sha256": "cc1f215791e3142424aa90f1ec19730d7a492ce01245ebb5faa2603d5ae8ac35"
     },
     {
       "id": "quick-share",
